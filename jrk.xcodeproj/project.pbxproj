@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		193CCB3A221F49550009ADFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB39221F49550009ADFC /* AppDelegate.swift */; };
-		193CCB3C221F49550009ADFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB3B221F49550009ADFC /* ViewController.swift */; };
+		193CCB3C221F49550009ADFC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB3B221F49550009ADFC /* RootViewController.swift */; };
 		193CCB3F221F49550009ADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193CCB3D221F49550009ADFC /* Main.storyboard */; };
 		193CCB41221F49560009ADFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193CCB40221F49560009ADFC /* Assets.xcassets */; };
 		193CCB44221F49560009ADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193CCB42221F49560009ADFC /* LaunchScreen.storyboard */; };
-		193CCB4F221F49560009ADFC /* jrk2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB4E221F49560009ADFC /* jrk2Tests.swift */; };
+		193CCB4F221F49560009ADFC /* jrkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB4E221F49560009ADFC /* jrkTests.swift */; };
+		193CCB5F221F49F30009ADFC /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB5E221F49F30009ADFC /* Layout.swift */; };
+		193CCB61221F4A4A0009ADFC /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB60221F4A4A0009ADFC /* UICollectionView.swift */; };
+		193CCB64221F4A890009ADFC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB63221F4A890009ADFC /* Identifiable.swift */; };
+		193CCB67221F4AC00009ADFC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB66221F4AC00009ADFC /* Colors.swift */; };
+		193CCB69221F4CE00009ADFC /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB68221F4CE00009ADFC /* Spacing.swift */; };
+		193CCB6E221F4D840009ADFC /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB6D221F4D840009ADFC /* Label.swift */; };
+		193CCB70221F4D8A0009ADFC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB6F221F4D8A0009ADFC /* Button.swift */; };
+		193CCB73221F4DC00009ADFC /* Label+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB72221F4DC00009ADFC /* Label+Style.swift */; };
+		193CCB75221F4DF40009ADFC /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB74221F4DF40009ADFC /* Font.swift */; };
+		193CCB78221F50040009ADFC /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB77221F50040009ADFC /* Button+Style.swift */; };
+		193CCB7B221F523C0009ADFC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7A221F523C0009ADFC /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,21 +32,32 @@
 			containerPortal = 193CCB2E221F49550009ADFC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 193CCB35221F49550009ADFC;
-			remoteInfo = jrk2;
+			remoteInfo = jrk;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		193CCB36221F49550009ADFC /* jrk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jrk2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		193CCB36221F49550009ADFC /* jrk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jrk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193CCB39221F49550009ADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		193CCB3B221F49550009ADFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		193CCB3B221F49550009ADFC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		193CCB3E221F49550009ADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		193CCB40221F49560009ADFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		193CCB43221F49560009ADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		193CCB45221F49560009ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		193CCB4A221F49560009ADFC /* jrk2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jrk2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		193CCB4E221F49560009ADFC /* jrk2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jrk2Tests.swift; sourceTree = "<group>"; };
+		193CCB4A221F49560009ADFC /* jrkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jrkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		193CCB4E221F49560009ADFC /* jrkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jrkTests.swift; sourceTree = "<group>"; };
 		193CCB50221F49560009ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		193CCB5E221F49F30009ADFC /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		193CCB60221F4A4A0009ADFC /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		193CCB63221F4A890009ADFC /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		193CCB66221F4AC00009ADFC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		193CCB68221F4CE00009ADFC /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		193CCB6D221F4D840009ADFC /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		193CCB6F221F4D8A0009ADFC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		193CCB72221F4DC00009ADFC /* Label+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Style.swift"; sourceTree = "<group>"; };
+		193CCB74221F4DF40009ADFC /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		193CCB77221F50040009ADFC /* Button+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Style.swift"; sourceTree = "<group>"; };
+		193CCB7A221F523C0009ADFC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +81,8 @@
 		193CCB2D221F49550009ADFC = {
 			isa = PBXGroup;
 			children = (
-				193CCB38221F49550009ADFC /* jrk2 */,
-				193CCB4D221F49560009ADFC /* jrk2Tests */,
+				193CCB38221F49550009ADFC /* jrk */,
+				193CCB4D221F49560009ADFC /* Tests */,
 				193CCB37221F49550009ADFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,40 +90,147 @@
 		193CCB37221F49550009ADFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				193CCB36221F49550009ADFC /* jrk2.app */,
-				193CCB4A221F49560009ADFC /* jrk2Tests.xctest */,
+				193CCB36221F49550009ADFC /* jrk.app */,
+				193CCB4A221F49560009ADFC /* jrkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		193CCB38221F49550009ADFC /* jrk2 */ = {
+		193CCB38221F49550009ADFC /* jrk */ = {
 			isa = PBXGroup;
 			children = (
-				193CCB39221F49550009ADFC /* AppDelegate.swift */,
-				193CCB3B221F49550009ADFC /* ViewController.swift */,
-				193CCB3D221F49550009ADFC /* Main.storyboard */,
+				193CCB5A221F49A10009ADFC /* Storyboard */,
+				193CCB59221F49950009ADFC /* Sources */,
 				193CCB40221F49560009ADFC /* Assets.xcassets */,
 				193CCB42221F49560009ADFC /* LaunchScreen.storyboard */,
 				193CCB45221F49560009ADFC /* Info.plist */,
 			);
-			path = jrk2;
+			path = jrk;
 			sourceTree = "<group>";
 		};
-		193CCB4D221F49560009ADFC /* jrk2Tests */ = {
+		193CCB4D221F49560009ADFC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				193CCB4E221F49560009ADFC /* jrk2Tests.swift */,
+				193CCB4E221F49560009ADFC /* jrkTests.swift */,
 				193CCB50221F49560009ADFC /* Info.plist */,
 			);
-			path = jrk2Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		193CCB59221F49950009ADFC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB6C221F4D750009ADFC /* Components */,
+				193CCB65221F4AB70009ADFC /* DNA */,
+				193CCB5B221F49C50009ADFC /* Extensions */,
+				193CCB62221F4A7F0009ADFC /* Protocols */,
+				193CCB6A221F4D280009ADFC /* Fullscreen */,
+				193CCB39221F49550009ADFC /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		193CCB5A221F49A10009ADFC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB3D221F49550009ADFC /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		193CCB5B221F49C50009ADFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB79221F52340009ADFC /* Foundation */,
+				193CCB5D221F49D10009ADFC /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		193CCB5D221F49D10009ADFC /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB5E221F49F30009ADFC /* Layout.swift */,
+				193CCB60221F4A4A0009ADFC /* UICollectionView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		193CCB62221F4A7F0009ADFC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB63221F4A890009ADFC /* Identifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		193CCB65221F4AB70009ADFC /* DNA */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB66221F4AC00009ADFC /* Colors.swift */,
+				193CCB68221F4CE00009ADFC /* Spacing.swift */,
+				193CCB74221F4DF40009ADFC /* Font.swift */,
+			);
+			path = DNA;
+			sourceTree = "<group>";
+		};
+		193CCB6A221F4D280009ADFC /* Fullscreen */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB6B221F4D360009ADFC /* Root */,
+			);
+			path = Fullscreen;
+			sourceTree = "<group>";
+		};
+		193CCB6B221F4D360009ADFC /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB3B221F49550009ADFC /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		193CCB6C221F4D750009ADFC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB76221F4FFA0009ADFC /* Button */,
+				193CCB71221F4DB70009ADFC /* Label */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		193CCB71221F4DB70009ADFC /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB6D221F4D840009ADFC /* Label.swift */,
+				193CCB72221F4DC00009ADFC /* Label+Style.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		193CCB76221F4FFA0009ADFC /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB6F221F4D8A0009ADFC /* Button.swift */,
+				193CCB77221F50040009ADFC /* Button+Style.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		193CCB79221F52340009ADFC /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB7A221F523C0009ADFC /* String.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		193CCB35221F49550009ADFC /* jrk2 */ = {
+		193CCB35221F49550009ADFC /* jrk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 193CCB53221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrk2" */;
+			buildConfigurationList = 193CCB53221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrk" */;
 			buildPhases = (
 				193CCB32221F49550009ADFC /* Sources */,
 				193CCB33221F49550009ADFC /* Frameworks */,
@@ -111,14 +240,14 @@
 			);
 			dependencies = (
 			);
-			name = jrk2;
-			productName = jrk2;
-			productReference = 193CCB36221F49550009ADFC /* jrk2.app */;
+			name = jrk;
+			productName = jrk;
+			productReference = 193CCB36221F49550009ADFC /* jrk.app */;
 			productType = "com.apple.product-type.application";
 		};
-		193CCB49221F49560009ADFC /* jrk2Tests */ = {
+		193CCB49221F49560009ADFC /* jrkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 193CCB56221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrk2Tests" */;
+			buildConfigurationList = 193CCB56221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrkTests" */;
 			buildPhases = (
 				193CCB46221F49560009ADFC /* Sources */,
 				193CCB47221F49560009ADFC /* Frameworks */,
@@ -129,9 +258,9 @@
 			dependencies = (
 				193CCB4C221F49560009ADFC /* PBXTargetDependency */,
 			);
-			name = jrk2Tests;
-			productName = jrk2Tests;
-			productReference = 193CCB4A221F49560009ADFC /* jrk2Tests.xctest */;
+			name = jrkTests;
+			productName = jrkTests;
+			productReference = 193CCB4A221F49560009ADFC /* jrkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +282,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 193CCB31221F49550009ADFC /* Build configuration list for PBXProject "jrk2" */;
+			buildConfigurationList = 193CCB31221F49550009ADFC /* Build configuration list for PBXProject "jrk" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,8 +295,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				193CCB35221F49550009ADFC /* jrk2 */,
-				193CCB49221F49560009ADFC /* jrk2Tests */,
+				193CCB35221F49550009ADFC /* jrk */,
+				193CCB49221F49560009ADFC /* jrkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,8 +326,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193CCB3C221F49550009ADFC /* ViewController.swift in Sources */,
+				193CCB69221F4CE00009ADFC /* Spacing.swift in Sources */,
+				193CCB7B221F523C0009ADFC /* String.swift in Sources */,
+				193CCB75221F4DF40009ADFC /* Font.swift in Sources */,
+				193CCB3C221F49550009ADFC /* RootViewController.swift in Sources */,
+				193CCB73221F4DC00009ADFC /* Label+Style.swift in Sources */,
+				193CCB67221F4AC00009ADFC /* Colors.swift in Sources */,
 				193CCB3A221F49550009ADFC /* AppDelegate.swift in Sources */,
+				193CCB61221F4A4A0009ADFC /* UICollectionView.swift in Sources */,
+				193CCB64221F4A890009ADFC /* Identifiable.swift in Sources */,
+				193CCB6E221F4D840009ADFC /* Label.swift in Sources */,
+				193CCB78221F50040009ADFC /* Button+Style.swift in Sources */,
+				193CCB70221F4D8A0009ADFC /* Button.swift in Sources */,
+				193CCB5F221F49F30009ADFC /* Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193CCB4F221F49560009ADFC /* jrk2Tests.swift in Sources */,
+				193CCB4F221F49560009ADFC /* jrkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +355,7 @@
 /* Begin PBXTargetDependency section */
 		193CCB4C221F49560009ADFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 193CCB35221F49550009ADFC /* jrk2 */;
+			target = 193CCB35221F49550009ADFC /* jrk */;
 			targetProxy = 193CCB4B221F49560009ADFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -362,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WSQ25TFDK3;
-				INFOPLIST_FILE = jrk2/Info.plist;
+				INFOPLIST_FILE = jrk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WSQ25TFDK3;
-				INFOPLIST_FILE = jrk2/Info.plist;
+				INFOPLIST_FILE = jrk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,17 +539,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WSQ25TFDK3;
-				INFOPLIST_FILE = jrk2Tests/Info.plist;
+				INFOPLIST_FILE = jrkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.jrk2Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.jrkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jrk2.app/jrk2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jrk.app/jrk";
 			};
 			name = Debug;
 		};
@@ -420,24 +560,24 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WSQ25TFDK3;
-				INFOPLIST_FILE = jrk2Tests/Info.plist;
+				INFOPLIST_FILE = jrkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.jrk2Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.jrkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jrk2.app/jrk2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jrk.app/jrk";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		193CCB31221F49550009ADFC /* Build configuration list for PBXProject "jrk2" */ = {
+		193CCB31221F49550009ADFC /* Build configuration list for PBXProject "jrk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				193CCB51221F49560009ADFC /* Debug */,
@@ -446,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		193CCB53221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrk2" */ = {
+		193CCB53221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				193CCB54221F49560009ADFC /* Debug */,
@@ -455,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		193CCB56221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrk2Tests" */ = {
+		193CCB56221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				193CCB57221F49560009ADFC /* Debug */,

@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import jrk2
+@testable import jrk
 
-class jrk2Tests: XCTestCase {
+class jrkTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
