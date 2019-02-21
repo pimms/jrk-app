@@ -11,7 +11,7 @@ public extension Button {
 
         var font: UIFont {
             switch self {
-            default: return .title4
+            default: return .body
             }
         }
 

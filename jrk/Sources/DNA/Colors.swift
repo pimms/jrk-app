@@ -18,6 +18,18 @@ extension UIColor {
         return UIColor(r: 34, g: 34, b: 34)
     }
 
+    public class var inverseBackground: UIColor {
+        return UIColor(r: 220, g: 220, b: 220)
+    }
+
+    public class var defaultText: UIColor {
+        return UIColor(r: 200, g: 200, b: 200)
+    }
+
+    public class var inverseText: UIColor {
+        return UIColor(r: 34, g: 34, b: 34)
+    }
+
     // MARK: - Action button
 
     public class var actionButtonBackground: UIColor {
@@ -47,8 +59,4 @@ extension UIColor {
         return UIColor(r: 90, g: 10, b: 20)
     }
 
-
-    public class var defaultText: UIColor {
-        return UIColor(r: 200, g: 200, b: 200)
-    }
 }

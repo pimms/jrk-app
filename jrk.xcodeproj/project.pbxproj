@@ -24,6 +24,8 @@
 		193CCB75221F4DF40009ADFC /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB74221F4DF40009ADFC /* Font.swift */; };
 		193CCB78221F50040009ADFC /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB77221F50040009ADFC /* Button+Style.swift */; };
 		193CCB7B221F523C0009ADFC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7A221F523C0009ADFC /* String.swift */; };
+		193CCB7E221F536C0009ADFC /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7D221F536C0009ADFC /* SetupViewController.swift */; };
+		193CCB80221F544F0009ADFC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7F221F544F0009ADFC /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		193CCB74221F4DF40009ADFC /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		193CCB77221F50040009ADFC /* Button+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Style.swift"; sourceTree = "<group>"; };
 		193CCB7A221F523C0009ADFC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		193CCB7D221F536C0009ADFC /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		193CCB7F221F544F0009ADFC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,6 @@
 				193CCB5A221F49A10009ADFC /* Storyboard */,
 				193CCB59221F49950009ADFC /* Sources */,
 				193CCB40221F49560009ADFC /* Assets.xcassets */,
-				193CCB42221F49560009ADFC /* LaunchScreen.storyboard */,
 				193CCB45221F49560009ADFC /* Info.plist */,
 			);
 			path = jrk;
@@ -133,6 +136,7 @@
 		193CCB5A221F49A10009ADFC /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				193CCB42221F49560009ADFC /* LaunchScreen.storyboard */,
 				193CCB3D221F49550009ADFC /* Main.storyboard */,
 			);
 			path = Storyboard;
@@ -152,6 +156,7 @@
 			children = (
 				193CCB5E221F49F30009ADFC /* Layout.swift */,
 				193CCB60221F4A4A0009ADFC /* UICollectionView.swift */,
+				193CCB7F221F544F0009ADFC /* UIViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		193CCB6A221F4D280009ADFC /* Fullscreen */ = {
 			isa = PBXGroup;
 			children = (
+				193CCB7C221F535C0009ADFC /* Setup */,
 				193CCB6B221F4D360009ADFC /* Root */,
 			);
 			path = Fullscreen;
@@ -223,6 +229,14 @@
 				193CCB7A221F523C0009ADFC /* String.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		193CCB7C221F535C0009ADFC /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB7D221F536C0009ADFC /* SetupViewController.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +346,7 @@
 				193CCB3C221F49550009ADFC /* RootViewController.swift in Sources */,
 				193CCB73221F4DC00009ADFC /* Label+Style.swift in Sources */,
 				193CCB67221F4AC00009ADFC /* Colors.swift in Sources */,
+				193CCB7E221F536C0009ADFC /* SetupViewController.swift in Sources */,
 				193CCB3A221F49550009ADFC /* AppDelegate.swift in Sources */,
 				193CCB61221F4A4A0009ADFC /* UICollectionView.swift in Sources */,
 				193CCB64221F4A890009ADFC /* Identifiable.swift in Sources */,
@@ -339,6 +354,7 @@
 				193CCB78221F50040009ADFC /* Button+Style.swift in Sources */,
 				193CCB70221F4D8A0009ADFC /* Button.swift in Sources */,
 				193CCB5F221F49F30009ADFC /* Layout.swift in Sources */,
+				193CCB80221F544F0009ADFC /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
