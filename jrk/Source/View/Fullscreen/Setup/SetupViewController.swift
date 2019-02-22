@@ -36,6 +36,12 @@ class SetupViewController: UIViewController {
         return button
     }()
 
+    private lazy var loadOverlay: LoadOverlayView = {
+        let view = LoadOverlayView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +49,11 @@ class SetupViewController: UIViewController {
 
         view.addSubview(textField)
         view.addSubview(connectButton)
+        view.addSubview(loadOverlay)
+
+        loadOverlay.fillInSuperview()
+        loadOverlay.isHidden = true
+        loadOverlay.text = "Connecting..."
 
         NSLayoutConstraint.activate([
             textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .veryLargeSpacing),
@@ -67,8 +78,23 @@ class SetupViewController: UIViewController {
             urlWithProtocol = urlString
         }
 
-        connectionSetupHelper.attempt(withRootUrl: urlWithProtocol, resultHandler: { result in
+        self.loadOverlay.alpha = 0.0
+        self.loadOverlay.isHidden = false
+        UIView.animate(withDuration: 0.3, delay: 0.2, animations: {
+            self.loadOverlay.alpha = 1.0
+        })
+
+        connectionSetupHelper.attempt(withRootUrl: urlWithProtocol, resultHandler: { [weak self] result in
             print("Result: \(result)")
+
+            DispatchQueue.main.async {
+                UIView.setAnimationBeginsFromCurrentState(true)
+                UIView.animate(withDuration: 0.3, animations: {
+                    self?.loadOverlay.alpha = 0.0
+                }, completion: { _ in
+                    self?.loadOverlay.isHidden = true
+                })
+            }
         })
     }
 

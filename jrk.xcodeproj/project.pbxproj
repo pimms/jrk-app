@@ -31,6 +31,8 @@
 		19C0774822205DD900AA17EB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774722205DD900AA17EB /* Data.swift */; };
 		19C0774B2220683E00AA17EB /* ConnectionSetupHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774A2220683E00AA17EB /* ConnectionSetupHelper.swift */; };
 		19C0774F22206A7700AA17EB /* ServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774E22206A7700AA17EB /* ServerConnection.swift */; };
+		19C0775222207CDF00AA17EB /* LoadOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0775122207CDF00AA17EB /* LoadOverlayView.swift */; };
+		19C0775422207D9700AA17EB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0775322207D9700AA17EB /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		19C0774722205DD900AA17EB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		19C0774A2220683E00AA17EB /* ConnectionSetupHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSetupHelper.swift; sourceTree = "<group>"; };
 		19C0774E22206A7700AA17EB /* ServerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnection.swift; sourceTree = "<group>"; };
+		19C0775122207CDF00AA17EB /* LoadOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadOverlayView.swift; sourceTree = "<group>"; };
+		19C0775322207D9700AA17EB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 				193CCB5E221F49F30009ADFC /* Layout.swift */,
 				193CCB60221F4A4A0009ADFC /* UICollectionView.swift */,
 				193CCB7F221F544F0009ADFC /* UIViewController.swift */,
+				19C0775322207D9700AA17EB /* UIColor.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 		193CCB6A221F4D280009ADFC /* Fullscreen */ = {
 			isa = PBXGroup;
 			children = (
+				19C0775022207CC900AA17EB /* LoadOverlay */,
 				193CCB7C221F535C0009ADFC /* Setup */,
 				193CCB6B221F4D360009ADFC /* Root */,
 			);
@@ -284,6 +290,14 @@
 				19C0774E22206A7700AA17EB /* ServerConnection.swift */,
 			);
 			path = Connection;
+			sourceTree = "<group>";
+		};
+		19C0775022207CC900AA17EB /* LoadOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				19C0775122207CDF00AA17EB /* LoadOverlayView.swift */,
+			);
+			path = LoadOverlay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,10 +408,12 @@
 				193CCB73221F4DC00009ADFC /* Label+Style.swift in Sources */,
 				19C0774422205B5F00AA17EB /* NetworkClient.swift in Sources */,
 				193CCB67221F4AC00009ADFC /* Colors.swift in Sources */,
+				19C0775422207D9700AA17EB /* UIColor.swift in Sources */,
 				19C0774B2220683E00AA17EB /* ConnectionSetupHelper.swift in Sources */,
 				19C0774F22206A7700AA17EB /* ServerConnection.swift in Sources */,
 				19C0774822205DD900AA17EB /* Data.swift in Sources */,
 				193CCB7E221F536C0009ADFC /* SetupViewController.swift in Sources */,
+				19C0775222207CDF00AA17EB /* LoadOverlayView.swift in Sources */,
 				19C0774622205D3200AA17EB /* ServerInfoClient.swift in Sources */,
 				193CCB3A221F49550009ADFC /* AppDelegate.swift in Sources */,
 				193CCB61221F4A4A0009ADFC /* UICollectionView.swift in Sources */,
