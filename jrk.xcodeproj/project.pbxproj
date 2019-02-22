@@ -123,11 +123,10 @@
 		193CCB59221F49950009ADFC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				193CCB6C221F4D750009ADFC /* Components */,
-				193CCB65221F4AB70009ADFC /* DNA */,
+				19C0774122205B3600AA17EB /* View */,
 				193CCB5B221F49C50009ADFC /* Extensions */,
 				193CCB62221F4A7F0009ADFC /* Protocols */,
-				193CCB6A221F4D280009ADFC /* Fullscreen */,
+				19C0774022205B0B00AA17EB /* Models */,
 				193CCB39221F49550009ADFC /* AppDelegate.swift */,
 			);
 			path = Source;
@@ -237,6 +236,23 @@
 				193CCB7D221F536C0009ADFC /* SetupViewController.swift */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		19C0774022205B0B00AA17EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19C0774122205B3600AA17EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				193CCB6C221F4D750009ADFC /* Components */,
+				193CCB65221F4AB70009ADFC /* DNA */,
+				193CCB6A221F4D280009ADFC /* Fullscreen */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
