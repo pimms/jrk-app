@@ -5,6 +5,9 @@
 import UIKit
 
 class SetupViewController: UIViewController {
+
+    private let connectionSetupHelper = ConnectionSetupHelper()
+
     private lazy var textField: UITextField = {
         let field = UITextField(frame: .zero)
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -33,8 +36,6 @@ class SetupViewController: UIViewController {
         return button
     }()
 
-    private var networkClient: NetworkClient?
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,15 +59,17 @@ class SetupViewController: UIViewController {
         print("connect pls")
 
         guard let urlString = textField.text else { return }
-        guard let client = NetworkClient(rootUrl: "https://\(urlString)") else {
-            print("Nope!")
-            return
+
+        let urlWithProtocol: String
+        if urlString.prefix(4) != "http" {
+            urlWithProtocol = "https://\(urlString)"
+        } else {
+            urlWithProtocol = urlString
         }
 
-        networkClient = client
-        client.fetchServerInfo(dataCallback: { response in
-            print("INFO: \(response)")
-       })
+        connectionSetupHelper.attempt(withRootUrl: urlWithProtocol, resultHandler: { result in
+            print("Result: \(result)")
+        })
     }
 
     @objc private func textFieldChanged() {

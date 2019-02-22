@@ -28,12 +28,37 @@ class NetworkClient: NSObject {
     }
 
     func performRaw(path: String, dataCallback: @escaping (Data?, Error?) -> Void) {
+
         let url = rootUrl.appendingPathComponent(path)
+        let urlString = url.absoluteString
+        print("Performing request to: \(urlString)")
+
         let task = URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
+            if error != nil {
+                print("Request failed: \(urlString) (\(error!))")
+            } else {
+                print("Request completed: \(urlString)")
+            }
             dataCallback(data, error)
         })
 
         task.resume()
+    }
+
+    func performRawSync(path: String) -> (Data?, Error?) {
+        var data: Data?
+        var error: Error?
+        let semaphore = DispatchSemaphore(value: 0)
+
+        performRaw(path: path, dataCallback: {
+            data = $0
+            error = $1
+            semaphore.signal()
+        })
+
+        _ = semaphore.wait(timeout: .now() + 20.0)
+
+        return (data, error)
     }
 
     func perform<T: Decodable>(path: String, dataCallback: @escaping (Result<T>) -> Void) {

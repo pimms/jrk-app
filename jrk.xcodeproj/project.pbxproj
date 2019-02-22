@@ -29,6 +29,8 @@
 		19C0774422205B5F00AA17EB /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774322205B5F00AA17EB /* NetworkClient.swift */; };
 		19C0774622205D3200AA17EB /* ServerInfoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774522205D3200AA17EB /* ServerInfoClient.swift */; };
 		19C0774822205DD900AA17EB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774722205DD900AA17EB /* Data.swift */; };
+		19C0774B2220683E00AA17EB /* ConnectionSetupHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774A2220683E00AA17EB /* ConnectionSetupHelper.swift */; };
+		19C0774F22206A7700AA17EB /* ServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774E22206A7700AA17EB /* ServerConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		19C0774322205B5F00AA17EB /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		19C0774522205D3200AA17EB /* ServerInfoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfoClient.swift; sourceTree = "<group>"; };
 		19C0774722205DD900AA17EB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		19C0774A2220683E00AA17EB /* ConnectionSetupHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSetupHelper.swift; sourceTree = "<group>"; };
+		19C0774E22206A7700AA17EB /* ServerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +133,11 @@
 		193CCB59221F49950009ADFC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				19C0774122205B3600AA17EB /* View */,
+				19C0774C22206A2F00AA17EB /* Core */,
 				193CCB5B221F49C50009ADFC /* Extensions */,
 				193CCB62221F4A7F0009ADFC /* Protocols */,
-				19C0774022205B0B00AA17EB /* Models */,
 				19C0774222205B5300AA17EB /* Network */,
+				19C0774122205B3600AA17EB /* View */,
 				193CCB39221F49550009ADFC /* AppDelegate.swift */,
 			);
 			path = Source;
@@ -246,13 +250,6 @@
 			path = Setup;
 			sourceTree = "<group>";
 		};
-		19C0774022205B0B00AA17EB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		19C0774122205B3600AA17EB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +267,23 @@
 				19C0774522205D3200AA17EB /* ServerInfoClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		19C0774C22206A2F00AA17EB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				19C0774D22206A4400AA17EB /* Connection */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		19C0774D22206A4400AA17EB /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				19C0774A2220683E00AA17EB /* ConnectionSetupHelper.swift */,
+				19C0774E22206A7700AA17EB /* ServerConnection.swift */,
+			);
+			path = Connection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +394,8 @@
 				193CCB73221F4DC00009ADFC /* Label+Style.swift in Sources */,
 				19C0774422205B5F00AA17EB /* NetworkClient.swift in Sources */,
 				193CCB67221F4AC00009ADFC /* Colors.swift in Sources */,
+				19C0774B2220683E00AA17EB /* ConnectionSetupHelper.swift in Sources */,
+				19C0774F22206A7700AA17EB /* ServerConnection.swift in Sources */,
 				19C0774822205DD900AA17EB /* Data.swift in Sources */,
 				193CCB7E221F536C0009ADFC /* SetupViewController.swift in Sources */,
 				19C0774622205D3200AA17EB /* ServerInfoClient.swift in Sources */,

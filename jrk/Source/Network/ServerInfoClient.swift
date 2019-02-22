@@ -6,14 +6,14 @@ import Foundation
 
 struct ServerInfo: Decodable, Equatable, Hashable {
     private enum CodingKeys: String, CodingKey {
-        case playlistUrl = "playlistURL"
         case streamName
-        case streamPictureUrl = "streamPictureURL"
+        case playlistPath = "playlist"
+        case streamPicturePath = "streamPicture"
     }
 
-    let playlistUrl: String
     let streamName: String
-    let streamPictureUrl: String
+    let playlistPath: String
+    let streamPicturePath: String
 }
 
 protocol ServerInfoClient: class {
