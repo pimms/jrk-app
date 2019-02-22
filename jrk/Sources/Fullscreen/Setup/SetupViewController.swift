@@ -18,15 +18,19 @@ class SetupViewController: UIViewController {
         field.contentVerticalAlignment = .center
         field.keyboardAppearance = .dark
         field.autocapitalizationType = .none
+        field.enablesReturnKeyAutomatically = true
         field.textColor = .inverseText
         field.backgroundColor = .inverseBackground
+        field.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         return field
     }()
 
     private lazy var connectButton: Button = {
         let button = Button(style: .callToAction)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.isEnabled = false
         button.setTitle("Connect", for: .normal)
+        button.addTarget(self, action: #selector(connectButtonClicked), for: .touchUpInside)
         return button
     }()
 
@@ -45,7 +49,19 @@ class SetupViewController: UIViewController {
 
             connectButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .veryLargeSpacing),
             connectButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.veryLargeSpacing),
-            connectButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: .largeSpacing),
+            connectButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: .mediumLargeSpacing),
         ])
     }
+
+    @objc private func connectButtonClicked() {
+        print("connect pls")
+    }
+
+    @objc private func textFieldChanged() {
+        connectButton.isEnabled = (textField.text?.count ?? 0) >= 3
+    }
+}
+
+extension SetupViewController: UITextFieldDelegate {
+
 }
