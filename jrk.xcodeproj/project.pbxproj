@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				193CCB5A221F49A10009ADFC /* Storyboard */,
-				193CCB59221F49950009ADFC /* Sources */,
+				193CCB59221F49950009ADFC /* Source */,
 				193CCB40221F49560009ADFC /* Assets.xcassets */,
 				193CCB45221F49560009ADFC /* Info.plist */,
 			);
@@ -120,7 +120,7 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		193CCB59221F49950009ADFC /* Sources */ = {
+		193CCB59221F49950009ADFC /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				193CCB6C221F4D750009ADFC /* Components */,
@@ -130,7 +130,7 @@
 				193CCB6A221F4D280009ADFC /* Fullscreen */,
 				193CCB39221F49550009ADFC /* AppDelegate.swift */,
 			);
-			path = Sources;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		193CCB5A221F49A10009ADFC /* Storyboard */ = {
