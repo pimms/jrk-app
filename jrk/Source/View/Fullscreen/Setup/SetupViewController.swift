@@ -5,7 +5,6 @@
 import UIKit
 
 class SetupViewController: UIViewController {
-
     private lazy var textField: UITextField = {
         let field = UITextField(frame: .zero)
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -34,6 +33,8 @@ class SetupViewController: UIViewController {
         return button
     }()
 
+    private var networkClient: NetworkClient?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,6 +56,17 @@ class SetupViewController: UIViewController {
 
     @objc private func connectButtonClicked() {
         print("connect pls")
+
+        guard let urlString = textField.text else { return }
+        guard let client = NetworkClient(rootUrl: "https://\(urlString)") else {
+            print("Nope!")
+            return
+        }
+
+        networkClient = client
+        client.fetchServerInfo(dataCallback: { response in
+            print("INFO: \(response)")
+       })
     }
 
     @objc private func textFieldChanged() {
