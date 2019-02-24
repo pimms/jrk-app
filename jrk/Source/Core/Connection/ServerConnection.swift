@@ -11,6 +11,20 @@ struct ServerConnection {
     let coverImage: UIImage
 }
 
+// MARK: Saving
+
+extension ServerConnection {
+    private static func containerDirectory() -> URL? {
+        let fileManager = FileManager.default
+        guard let docDir = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            print("Unable to resolve the Documents Directory path")
+            return nil
+        }
+
+        return docDir.appendingPathComponent("servers", isDirectory: true)
+    }
+}
+
 extension ServerConnection {
     public func save() -> Bool {
         guard let rootDirectory = rootDirectory() else {
@@ -39,13 +53,7 @@ extension ServerConnection {
             return nil
         }
 
-        let fileManager = FileManager.default
-        guard let docDir = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            print("Unable to resolve the Documents Directory path")
-            return nil
-        }
-
-        return docDir.appendingPathComponent(directoryName, isDirectory: true)
+        return ServerConnection.containerDirectory()?.appendingPathComponent(directoryName, isDirectory: true)
     }
 
     private func createDirectoryIfNotExist(directoryUrl: URL) -> Bool {
@@ -112,5 +120,72 @@ extension ServerConnection {
             print("Failed to save cover image \(coverImageUrl.relativePath): \(error)")
             return false
         }
+    }
+}
+
+// MARK: - Loading
+
+extension ServerConnection {
+    public static func loadAll() -> [ServerConnection]? {
+        return load(n: Int.max)
+    }
+
+    public static func loadFirst() -> ServerConnection? {
+        return load(n: 1)?.first
+    }
+
+    private static func load(n: Int) -> [ServerConnection]? {
+        guard let containerDirectory = containerDirectory() else {
+            return nil
+        }
+
+        let entries: [String]
+        do {
+            entries = try FileManager.default.contentsOfDirectory(atPath: containerDirectory.relativePath)
+        } catch {
+            print("Failed to list contents of container directory: \(error)")
+            return nil
+        }
+
+        var connections = [ServerConnection]()
+
+        for entry in entries {
+            let directory = containerDirectory.appendingPathComponent(entry, isDirectory: true)
+            if let connection = load(fromDirectory: directory) {
+                connections.append(connection)
+                if connections.count >= n {
+                    break
+                }
+            }
+        }
+
+        return connections
+    }
+
+
+    private static func load(fromDirectory directory: URL) -> ServerConnection? {
+        let imagePath = directory.appendingPathComponent("coverImage.png")
+        guard let coverImage = UIImage(contentsOfFile: imagePath.relativePath) else {
+            print("Failed to load image")
+            return nil
+        }
+
+        let plistPath = directory.appendingPathComponent("serverinfo.plist")
+        guard let dict = NSDictionary(contentsOfFile: plistPath.relativePath) else {
+            print("Failed to load dictionary")
+            return nil
+        }
+
+        guard let rootUrl = dict["rootUrl"] as? String,
+              let coverImagePath = dict["coverImagePath"] as? String,
+              let playlistPath = dict["playlistPath"] as? String else {
+            print("Failed to find expected elements in dict")
+            return nil
+        }
+
+        return ServerConnection(rootUrl: rootUrl,
+                                coverImagePath: coverImagePath,
+                                playlistPath: playlistPath,
+                                coverImage: coverImage)
     }
 }
