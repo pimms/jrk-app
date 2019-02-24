@@ -39,7 +39,10 @@ class NetworkClient: NSObject {
             } else {
                 print("Request completed: \(urlString)")
             }
-            dataCallback(data, error)
+
+            DispatchQueue.main.async {
+                dataCallback(data, error)
+            }
         })
 
         task.resume()

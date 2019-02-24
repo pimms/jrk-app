@@ -42,8 +42,7 @@ extension ServerConnection {
             return false
         }
 
-        print("Successfully saved ServerConnection to \(rootDirectory.relativePath)")
-
+        print("Successfully saved ServerConnection")
         return true
     }
 

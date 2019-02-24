@@ -31,7 +31,9 @@ class ConnectionSetupHelper {
             case .success(let serverInfo):
                 self.dispatchQueue.async {
                     guard let image = self.downloadImageSync(path: serverInfo.streamPicturePath) else {
-                        resultHandler(Result.failure(ConnectionSetupError.failedToFetchImage))
+                        DispatchQueue.main.async {
+                            resultHandler(Result.failure(ConnectionSetupError.failedToFetchImage))
+                        }
                         return
                     }
 
@@ -39,11 +41,15 @@ class ConnectionSetupHelper {
                                                       coverImagePath: serverInfo.streamPicturePath,
                                                       playlistPath: serverInfo.playlistPath,
                                                       coverImage: image)
-                    resultHandler(Result.success(connection))
+                    DispatchQueue.main.async {
+                        resultHandler(Result.success(connection))
+                    }
                 }
 
             case .failure(let err):
-                resultHandler(Result.failure(err))
+                DispatchQueue.main.async {
+                    resultHandler(Result.failure(err))
+                }
             }
         })
     }
