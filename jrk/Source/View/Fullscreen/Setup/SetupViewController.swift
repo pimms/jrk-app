@@ -4,9 +4,21 @@
 
 import UIKit
 
+protocol SetupViewControllerDelegate: class {
+    func setupViewController(_: SetupViewController, didConfigureConnection: ServerConnection)
+}
+
 class SetupViewController: UIViewController {
 
+    // MARK: - Public properties
+
+    public weak var delegate: SetupViewControllerDelegate?
+
+    // MARK: - Private properties
+
     private let connectionSetupHelper = ConnectionSetupHelper()
+
+    // MARK: - UI properties
 
     private lazy var imageView: UIImageView = {
         let view = UIImageView()
@@ -50,6 +62,8 @@ class SetupViewController: UIViewController {
         return view
     }()
 
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -82,6 +96,8 @@ class SetupViewController: UIViewController {
         ])
     }
 
+    // MARK: - UI interaction
+
     @objc private func connectButtonClicked() {
         print("connect pls")
 
@@ -101,13 +117,17 @@ class SetupViewController: UIViewController {
         })
 
         connectionSetupHelper.attempt(withRootUrl: urlWithProtocol, resultHandler: { [weak self] result in
+            guard let self = self else { return }
+
             var success: Bool
             var errorMessage = ""
+            var connection: ServerConnection?
 
             switch (result) {
             case .success(let serverConnection):
                 if serverConnection.save() {
                     success = true
+                    connection = serverConnection
                 } else {
                     success = false
                     errorMessage = "Connection succeeded, but saving connection info failed."
@@ -119,14 +139,16 @@ class SetupViewController: UIViewController {
             }
 
             DispatchQueue.main.async {
-                if !success {
-                    self?.present(UIAlertController.errorAlert(withMessage: errorMessage), animated: true)
+                if success {
+                    self.delegate?.setupViewController(self, didConfigureConnection: connection!)
+                } else {
+                    self.present(UIAlertController.errorAlert(withMessage: errorMessage), animated: true)
                 }
 
                 UIView.animate(withDuration: 0.3, delay: 0, options: .beginFromCurrentState, animations: {
-                    self?.loadOverlay.alpha = CGFloat(0.0)
+                    self.loadOverlay.alpha = CGFloat(0.0)
                 }, completion: { _ in
-                    self?.loadOverlay.isHidden = true
+                    self.loadOverlay.isHidden = true
                 })
             }
         })

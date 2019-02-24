@@ -26,6 +26,7 @@
 		193CCB7B221F523C0009ADFC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7A221F523C0009ADFC /* String.swift */; };
 		193CCB7E221F536C0009ADFC /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7D221F536C0009ADFC /* SetupViewController.swift */; };
 		193CCB80221F544F0009ADFC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7F221F544F0009ADFC /* UIViewController.swift */; };
+		1968AFA522230B7500A57704 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968AFA422230B7500A57704 /* PlayerViewController.swift */; };
 		19C0774422205B5F00AA17EB /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774322205B5F00AA17EB /* NetworkClient.swift */; };
 		19C0774622205D3200AA17EB /* ServerInfoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774522205D3200AA17EB /* ServerInfoClient.swift */; };
 		19C0774822205DD900AA17EB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774722205DD900AA17EB /* Data.swift */; };
@@ -71,6 +72,7 @@
 		193CCB7A221F523C0009ADFC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		193CCB7D221F536C0009ADFC /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		193CCB7F221F544F0009ADFC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		1968AFA422230B7500A57704 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		19C0774322205B5F00AA17EB /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		19C0774522205D3200AA17EB /* ServerInfoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfoClient.swift; sourceTree = "<group>"; };
 		19C0774722205DD900AA17EB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		193CCB6A221F4D280009ADFC /* Fullscreen */ = {
 			isa = PBXGroup;
 			children = (
+				1968AFA622230B7B00A57704 /* Player */,
 				19C0775022207CC900AA17EB /* LoadOverlay */,
 				193CCB7C221F535C0009ADFC /* Setup */,
 				193CCB6B221F4D360009ADFC /* Root */,
@@ -260,6 +263,14 @@
 				193CCB7D221F536C0009ADFC /* SetupViewController.swift */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		1968AFA622230B7B00A57704 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				1968AFA422230B7500A57704 /* PlayerViewController.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		19C0774122205B3600AA17EB /* View */ = {
@@ -425,6 +436,7 @@
 				19C0774622205D3200AA17EB /* ServerInfoClient.swift in Sources */,
 				193CCB3A221F49550009ADFC /* AppDelegate.swift in Sources */,
 				193CCB61221F4A4A0009ADFC /* UICollectionView.swift in Sources */,
+				1968AFA522230B7500A57704 /* PlayerViewController.swift in Sources */,
 				193CCB64221F4A890009ADFC /* Identifiable.swift in Sources */,
 				193CCB6E221F4D840009ADFC /* Label.swift in Sources */,
 				193CCB78221F50040009ADFC /* Button+Style.swift in Sources */,
