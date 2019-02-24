@@ -36,8 +36,9 @@ class ConnectionSetupHelper {
                     }
 
                     let connection = ServerConnection(rootUrl: rootUrl,
-                                                      coverImage: image,
-                                                      playlistPath: serverInfo.playlistPath)
+                                                      coverImagePath: serverInfo.streamPicturePath,
+                                                      playlistPath: serverInfo.playlistPath,
+                                                      coverImage: image)
                     resultHandler(Result.success(connection))
                 }
 

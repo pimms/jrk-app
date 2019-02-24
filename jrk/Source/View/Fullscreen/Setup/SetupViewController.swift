@@ -87,6 +87,13 @@ class SetupViewController: UIViewController {
         connectionSetupHelper.attempt(withRootUrl: urlWithProtocol, resultHandler: { [weak self] result in
             print("Result: \(result)")
 
+            switch (result) {
+            case .success(let serverConnection):
+                _ = serverConnection.save()
+            case .failure(let error):
+                print("Failed to connect: \(error)")
+            }
+
             DispatchQueue.main.async {
                 UIView.animate(withDuration: 0.3, delay: 0, options: .beginFromCurrentState, animations: {
                     self?.loadOverlay.alpha = CGFloat(0.0)
