@@ -80,7 +80,7 @@ class SetupViewController: UIViewController {
 
         self.loadOverlay.alpha = 0.0
         self.loadOverlay.isHidden = false
-        UIView.animate(withDuration: 0.3, delay: 0.2, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.1, animations: {
             self.loadOverlay.alpha = 1.0
         })
 
@@ -88,9 +88,8 @@ class SetupViewController: UIViewController {
             print("Result: \(result)")
 
             DispatchQueue.main.async {
-                UIView.setAnimationBeginsFromCurrentState(true)
-                UIView.animate(withDuration: 0.3, animations: {
-                    self?.loadOverlay.alpha = 0.0
+                UIView.animate(withDuration: 0.3, delay: 0, options: .beginFromCurrentState, animations: {
+                    self?.loadOverlay.alpha = CGFloat(0.0)
                 }, completion: { _ in
                     self?.loadOverlay.isHidden = true
                 })
