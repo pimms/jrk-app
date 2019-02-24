@@ -85,16 +85,28 @@ class SetupViewController: UIViewController {
         })
 
         connectionSetupHelper.attempt(withRootUrl: urlWithProtocol, resultHandler: { [weak self] result in
-            print("Result: \(result)")
+            var success: Bool
+            var errorMessage = ""
 
             switch (result) {
             case .success(let serverConnection):
-                _ = serverConnection.save()
+                if serverConnection.save() {
+                    success = true
+                } else {
+                    success = false
+                    errorMessage = "Connection succeeded, but saving connection info failed."
+                }
             case .failure(let error):
                 print("Failed to connect: \(error)")
+                success = false
+                errorMessage = error.localizedDescription
             }
 
             DispatchQueue.main.async {
+                if !success {
+                    self?.present(UIAlertController.errorAlert(withMessage: errorMessage), animated: true)
+                }
+
                 UIView.animate(withDuration: 0.3, delay: 0, options: .beginFromCurrentState, animations: {
                     self?.loadOverlay.alpha = CGFloat(0.0)
                 }, completion: { _ in

@@ -33,6 +33,7 @@
 		19C0774F22206A7700AA17EB /* ServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0774E22206A7700AA17EB /* ServerConnection.swift */; };
 		19C0775222207CDF00AA17EB /* LoadOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0775122207CDF00AA17EB /* LoadOverlayView.swift */; };
 		19C0775422207D9700AA17EB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0775322207D9700AA17EB /* UIColor.swift */; };
+		19C077562222E40C00AA17EB /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C077552222E40C00AA17EB /* UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		19C0774E22206A7700AA17EB /* ServerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnection.swift; sourceTree = "<group>"; };
 		19C0775122207CDF00AA17EB /* LoadOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadOverlayView.swift; sourceTree = "<group>"; };
 		19C0775322207D9700AA17EB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		19C077552222E40C00AA17EB /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				193CCB60221F4A4A0009ADFC /* UICollectionView.swift */,
 				193CCB7F221F544F0009ADFC /* UIViewController.swift */,
 				19C0775322207D9700AA17EB /* UIColor.swift */,
+				19C077552222E40C00AA17EB /* UIAlertController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				193CCB67221F4AC00009ADFC /* Colors.swift in Sources */,
 				19C0775422207D9700AA17EB /* UIColor.swift in Sources */,
 				19C0774B2220683E00AA17EB /* ConnectionSetupHelper.swift in Sources */,
+				19C077562222E40C00AA17EB /* UIAlertController.swift in Sources */,
 				19C0774F22206A7700AA17EB /* ServerConnection.swift in Sources */,
 				19C0774822205DD900AA17EB /* Data.swift in Sources */,
 				193CCB7E221F536C0009ADFC /* SetupViewController.swift in Sources */,

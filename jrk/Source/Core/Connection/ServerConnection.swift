@@ -55,7 +55,6 @@ extension ServerConnection {
         let exists = manager.fileExists(atPath: directoryUrl.relativePath, isDirectory: &isDir)
 
         if exists, isDir.boolValue {
-            print("Directory  already exists: \(directoryUrl.relativePath)")
             return true
         } else if exists, !isDir.boolValue {
             print("A non-directory file exists at \(directoryUrl.relativePath)")
@@ -64,7 +63,6 @@ extension ServerConnection {
 
         do {
             try manager.createDirectory(atPath: directoryUrl.relativePath, withIntermediateDirectories: true, attributes: nil)
-            print("Created directory '\(directoryUrl.relativePath)'")
             return true
         } catch let error as NSError {
             print("Failed to create directory '\(directoryUrl.relativePath)': \(error.localizedDescription)");
