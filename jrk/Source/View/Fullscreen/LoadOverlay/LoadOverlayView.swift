@@ -56,7 +56,7 @@ class LoadOverlayView: UIView {
 
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .mediumLargeSpacing),
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -.mediumLargeSpacing),
-            label.bottomAnchor.constraint(equalTo: centerYAnchor, constant: -(.largeSpacing * 2)),
+            label.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -48.0),
         ])
     }
 }

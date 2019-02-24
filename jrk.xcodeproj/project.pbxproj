@@ -34,6 +34,7 @@
 		19C0775222207CDF00AA17EB /* LoadOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0775122207CDF00AA17EB /* LoadOverlayView.swift */; };
 		19C0775422207D9700AA17EB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0775322207D9700AA17EB /* UIColor.swift */; };
 		19C077562222E40C00AA17EB /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C077552222E40C00AA17EB /* UIAlertController.swift */; };
+		19C077582222E69A00AA17EB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C077572222E69A00AA17EB /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		19C0775122207CDF00AA17EB /* LoadOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadOverlayView.swift; sourceTree = "<group>"; };
 		19C0775322207D9700AA17EB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		19C077552222E40C00AA17EB /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		19C077572222E69A00AA17EB /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				19C0774222205B5300AA17EB /* Network */,
 				19C0774122205B3600AA17EB /* View */,
 				193CCB39221F49550009ADFC /* AppDelegate.swift */,
+				19C077572222E69A00AA17EB /* Assets.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			files = (
 				193CCB69221F4CE00009ADFC /* Spacing.swift in Sources */,
 				193CCB7B221F523C0009ADFC /* String.swift in Sources */,
+				19C077582222E69A00AA17EB /* Assets.swift in Sources */,
 				193CCB75221F4DF40009ADFC /* Font.swift in Sources */,
 				193CCB3C221F49550009ADFC /* RootViewController.swift in Sources */,
 				193CCB73221F4DC00009ADFC /* Label+Style.swift in Sources */,

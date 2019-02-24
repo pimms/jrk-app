@@ -8,6 +8,14 @@ class SetupViewController: UIViewController {
 
     private let connectionSetupHelper = ConnectionSetupHelper()
 
+    private lazy var imageView: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: .jrkLight)
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+
     private lazy var textField: UITextField = {
         let field = UITextField(frame: .zero)
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -47,6 +55,7 @@ class SetupViewController: UIViewController {
 
         view.backgroundColor = .defaultBackground
 
+        view.addSubview(imageView)
         view.addSubview(textField)
         view.addSubview(connectButton)
         view.addSubview(loadOverlay)
@@ -55,13 +64,20 @@ class SetupViewController: UIViewController {
         loadOverlay.isHidden = true
         loadOverlay.text = "Connecting..."
 
-        NSLayoutConstraint.activate([
-            textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .veryLargeSpacing),
-            textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.veryLargeSpacing),
-            textField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        let safeLayout = view.safeAreaLayoutGuide
 
-            connectButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .veryLargeSpacing),
-            connectButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.veryLargeSpacing),
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: safeLayout.topAnchor, constant: .veryLargeSpacing),
+            imageView.leadingAnchor.constraint(equalTo: safeLayout.leadingAnchor, constant: .veryLargeSpacing),
+            imageView.trailingAnchor.constraint(equalTo: safeLayout.trailingAnchor, constant: -.veryLargeSpacing),
+
+            textField.topAnchor.constraint(greaterThanOrEqualTo: imageView.bottomAnchor, constant: .largeSpacing),
+            textField.leadingAnchor.constraint(equalTo: safeLayout.leadingAnchor, constant: .veryLargeSpacing),
+            textField.trailingAnchor.constraint(equalTo: safeLayout.trailingAnchor, constant: -.veryLargeSpacing),
+            textField.centerYAnchor.constraint(equalTo: safeLayout.centerYAnchor),
+
+            connectButton.leadingAnchor.constraint(equalTo: safeLayout.leadingAnchor, constant: .veryLargeSpacing),
+            connectButton.trailingAnchor.constraint(equalTo: safeLayout.trailingAnchor, constant: -.veryLargeSpacing),
             connectButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: .mediumLargeSpacing),
         ])
     }
@@ -119,8 +135,4 @@ class SetupViewController: UIViewController {
     @objc private func textFieldChanged() {
         connectButton.isEnabled = (textField.text?.count ?? 0) >= 3
     }
-}
-
-extension SetupViewController: UITextFieldDelegate {
-
 }
