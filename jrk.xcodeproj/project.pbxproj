@@ -26,6 +26,8 @@
 		193CCB7B221F523C0009ADFC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7A221F523C0009ADFC /* String.swift */; };
 		193CCB7E221F536C0009ADFC /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7D221F536C0009ADFC /* SetupViewController.swift */; };
 		193CCB80221F544F0009ADFC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB7F221F544F0009ADFC /* UIViewController.swift */; };
+		196717BE222ABC2000D4A692 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196717BD222ABC2000D4A692 /* PlayButton.swift */; };
+		196717C0222C166A00D4A692 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196717BF222C166A00D4A692 /* CGPoint.swift */; };
 		1968AFA522230B7500A57704 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968AFA422230B7500A57704 /* PlayerViewController.swift */; };
 		19706CBA2223394A000E68A2 /* NowPlayingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19706CB92223394A000E68A2 /* NowPlayingClient.swift */; };
 		19706CBC22233DB1000E68A2 /* EdgeShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19706CBB22233DB1000E68A2 /* EdgeShadowLayer.swift */; };
@@ -74,6 +76,8 @@
 		193CCB7A221F523C0009ADFC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		193CCB7D221F536C0009ADFC /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		193CCB7F221F544F0009ADFC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		196717BD222ABC2000D4A692 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		196717BF222C166A00D4A692 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		1968AFA422230B7500A57704 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		19706CB92223394A000E68A2 /* NowPlayingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingClient.swift; sourceTree = "<group>"; };
 		19706CBB22233DB1000E68A2 /* EdgeShadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeShadowLayer.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				193CCB7F221F544F0009ADFC /* UIViewController.swift */,
 				19C0775322207D9700AA17EB /* UIColor.swift */,
 				19C077552222E40C00AA17EB /* UIAlertController.swift */,
+				196717BF222C166A00D4A692 /* CGPoint.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 		193CCB6C221F4D750009ADFC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				196717BC222ABC1500D4A692 /* PlayButton */,
 				19706CBD22233DDC000E68A2 /* EdgeShadowLayer */,
 				193CCB76221F4FFA0009ADFC /* Button */,
 				193CCB71221F4DB70009ADFC /* Label */,
@@ -268,6 +274,14 @@
 				193CCB7D221F536C0009ADFC /* SetupViewController.swift */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		196717BC222ABC1500D4A692 /* PlayButton */ = {
+			isa = PBXGroup;
+			children = (
+				196717BD222ABC2000D4A692 /* PlayButton.swift */,
+			);
+			path = PlayButton;
 			sourceTree = "<group>";
 		};
 		1968AFA622230B7B00A57704 /* Player */ = {
@@ -432,7 +446,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196717C0222C166A00D4A692 /* CGPoint.swift in Sources */,
 				193CCB69221F4CE00009ADFC /* Spacing.swift in Sources */,
+				196717BE222ABC2000D4A692 /* PlayButton.swift in Sources */,
 				193CCB7B221F523C0009ADFC /* String.swift in Sources */,
 				19C077582222E69A00AA17EB /* Assets.swift in Sources */,
 				193CCB75221F4DF40009ADFC /* Font.swift in Sources */,

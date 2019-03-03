@@ -42,6 +42,13 @@ class PlayerViewController: UIViewController {
         return label
     }()
 
+    private lazy var playButton: PlayButton = {
+        let button = PlayButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.delegate = self
+        return button
+    }()
+
     // MARK: - Init
 
     required init?(coder aDecoder: NSCoder) {
@@ -67,6 +74,7 @@ class PlayerViewController: UIViewController {
         view.addSubview(imageView)
         view.addSubview(titleLabel)
         view.addSubview(seasonLabel)
+        view.addSubview(playButton)
 
         let guide = view.safeAreaLayoutGuide
 
@@ -83,6 +91,11 @@ class PlayerViewController: UIViewController {
             seasonLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: .mediumSpacing),
             seasonLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: .largeSpacing),
             seasonLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -.largeSpacing),
+
+            playButton.topAnchor.constraint(greaterThanOrEqualTo: seasonLabel.bottomAnchor, constant: .largeSpacing),
+            playButton.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: .veryLargeSpacing),
+            playButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -.veryLargeSpacing),
+            playButton.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -.largeSpacing),
         ])
 
         imageView.image = serverConnection.coverImage
@@ -97,5 +110,11 @@ class PlayerViewController: UIViewController {
                 print("oh no, failed: \(error)")
             }
         })
+    }
+}
+
+extension PlayerViewController: PlayButtonDelegate {
+    func playButtonClicked(_: PlayButton) {
+        print("Play button clicked")
     }
 }

@@ -6,7 +6,7 @@ import UIKit
 
 extension UIColor {
     public class var defaultBackground: UIColor {
-        return UIColor(r: 34, g: 34, b: 34)
+        return .black
     }
 
     public class var inverseBackground: UIColor {

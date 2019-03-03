@@ -31,4 +31,23 @@ public extension UIView {
 
         return constraints
     }
+
+    /// Locks the view's aspect ratio
+    ///
+    /// - Parameters:
+    ///   - ratio: Aspect ratio; width divided by height.
+    ///   - isActive: Whether to activate the constraint or not
+    /// - Returns: The added constraint
+    @discardableResult
+    public func constrainAspectRatio(_ ratio: CGFloat, isActive: Bool = true) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+
+        let constraint = heightAnchor.constraint(equalTo: widthAnchor, multiplier: ratio, constant: 0.0)
+
+        if isActive {
+            NSLayoutConstraint.activate([constraint])
+        }
+
+        return constraint
+    }
 }
