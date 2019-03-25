@@ -40,6 +40,8 @@
 		19C0775422207D9700AA17EB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0775322207D9700AA17EB /* UIColor.swift */; };
 		19C077562222E40C00AA17EB /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C077552222E40C00AA17EB /* UIAlertController.swift */; };
 		19C077582222E69A00AA17EB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C077572222E69A00AA17EB /* Assets.swift */; };
+		19E73E3E22495CDB0014664A /* StreamPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E73E3D22495CDB0014664A /* StreamPlayer.swift */; };
+		19E73E4122495E140014664A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E73E4022495E140014664A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		19C0775322207D9700AA17EB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		19C077552222E40C00AA17EB /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		19C077572222E69A00AA17EB /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		19E73E3D22495CDB0014664A /* StreamPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamPlayer.swift; sourceTree = "<group>"; };
+		19E73E4022495E140014664A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E73E4122495E140014664A /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +121,7 @@
 				193CCB38221F49550009ADFC /* jrk */,
 				193CCB4D221F49560009ADFC /* Tests */,
 				193CCB37221F49550009ADFC /* Products */,
+				19E73E3F22495E130014664A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,6 +329,7 @@
 		19C0774C22206A2F00AA17EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				19E73E3C22495CB40014664A /* Player */,
 				19C0774D22206A4400AA17EB /* Connection */,
 			);
 			path = Core;
@@ -343,6 +350,22 @@
 				19C0775122207CDF00AA17EB /* LoadOverlayView.swift */,
 			);
 			path = LoadOverlay;
+			sourceTree = "<group>";
+		};
+		19E73E3C22495CB40014664A /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				19E73E3D22495CDB0014664A /* StreamPlayer.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		19E73E3F22495E130014664A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19E73E4022495E140014664A /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +418,11 @@
 				TargetAttributes = {
 					193CCB35221F49550009ADFC = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					193CCB49221F49560009ADFC = {
 						CreatedOnToolsVersion = 10.1;
@@ -462,6 +490,7 @@
 				19C077562222E40C00AA17EB /* UIAlertController.swift in Sources */,
 				19C0774F22206A7700AA17EB /* ServerConnection.swift in Sources */,
 				19C0774822205DD900AA17EB /* Data.swift in Sources */,
+				19E73E3E22495CDB0014664A /* StreamPlayer.swift in Sources */,
 				193CCB7E221F536C0009ADFC /* SetupViewController.swift in Sources */,
 				19C0775222207CDF00AA17EB /* LoadOverlayView.swift in Sources */,
 				19C0774622205D3200AA17EB /* ServerInfoClient.swift in Sources */,

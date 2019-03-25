@@ -9,6 +9,8 @@ class PlayerViewController: UIViewController {
     // MARK: - Private properties
 
     private let serverConnection: ServerConnection
+    private let streamPlayer: StreamPlayer
+    private var networkClient: NetworkClient? // TODO: REMOVE
 
     // MARK: - UI properties
 
@@ -60,13 +62,15 @@ class PlayerViewController: UIViewController {
     }
 
     init(server: ServerConnection) {
-        self.serverConnection = server
+        serverConnection = server
+
+        let url = URL(string: serverConnection.rootUrl)!.appendingPathComponent(serverConnection.playlistPath)
+        streamPlayer = StreamPlayer(streamUrl: url)
+
         super.init(nibName: nil, bundle: nil)
     }
 
     // MARK: - Lifecycle
-
-    private var networkClient: NetworkClient? // TODO: REMOVE
 
     override func viewDidLoad() {
         view.backgroundColor = .defaultBackground
@@ -92,10 +96,11 @@ class PlayerViewController: UIViewController {
             seasonLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: .largeSpacing),
             seasonLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -.largeSpacing),
 
+            playButton.widthAnchor.constraint(equalTo: guide.widthAnchor, multiplier: 0.5),
             playButton.topAnchor.constraint(greaterThanOrEqualTo: seasonLabel.bottomAnchor, constant: .largeSpacing),
-            playButton.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: .veryLargeSpacing),
-            playButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -.veryLargeSpacing),
+            playButton.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
             playButton.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -.largeSpacing),
+            playButton.constrainAspectRatio(1.0),
         ])
 
         imageView.image = serverConnection.coverImage
@@ -116,5 +121,11 @@ class PlayerViewController: UIViewController {
 extension PlayerViewController: PlayButtonDelegate {
     func playButtonClicked(_: PlayButton) {
         print("Play button clicked")
+
+        if streamPlayer.isPlaying() {
+            streamPlayer.pause()
+        } else {
+            streamPlayer.play()
+        }
     }
 }

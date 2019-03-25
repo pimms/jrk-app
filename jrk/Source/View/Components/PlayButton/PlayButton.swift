@@ -46,14 +46,10 @@ class PlayButton: UIView {
         button.backgroundColor = .white
 
         button.setTitle("normal", for: .normal)
-        button.setTitle("focused", for: .focused)
         button.setTitle("highlighted", for: .highlighted)
-        button.setTitle("selected", for: .selected)
 
-        button.setTitleColor(.black, for: .normal)
-        button.setTitleColor(.black, for: .focused)
-        button.setTitleColor(.black, for: .highlighted)
-        button.setTitleColor(.black, for: .selected)
+        button.setTitleColor(.darkGray, for: .normal)
+        button.setTitleColor(.darkGray, for: .highlighted)
 
         addSubview(button)
 

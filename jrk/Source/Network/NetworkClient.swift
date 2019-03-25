@@ -15,7 +15,8 @@ enum Result<Value> {
 }
 
 class NetworkClient: NSObject {
-    private let rootUrl: URL
+    let rootUrl: URL
+
     private let decoder = JSONDecoder()
 
     required init?(rootUrl: String) {
@@ -28,7 +29,6 @@ class NetworkClient: NSObject {
     }
 
     func performRaw(path: String, dataCallback: @escaping (Data?, Error?) -> Void) {
-
         let url = rootUrl.appendingPathComponent(path)
         let urlString = url.absoluteString
         print("Performing request to: \(urlString)")
