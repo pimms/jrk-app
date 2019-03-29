@@ -4,8 +4,8 @@
 
 import UIKit
 
-public extension Label {
-    public enum Style {
+extension Label {
+    enum Style {
         case title1
         case title2
         case title3

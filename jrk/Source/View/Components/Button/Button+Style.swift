@@ -5,7 +5,7 @@
 import UIKit
 
 public extension Button {
-    public enum Style {
+    enum Style {
         case callToAction
         case destructive
 

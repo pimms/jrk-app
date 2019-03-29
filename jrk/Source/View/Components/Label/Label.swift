@@ -8,18 +8,18 @@ public class Label: UILabel {
 
     // MARK: - Setup
 
-    public init(style: Style) {
+    init(style: Style) {
         super.init(frame: .zero)
         self.style = style
         setup()
     }
 
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
 
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -34,5 +34,5 @@ public class Label: UILabel {
 
     // MARK: - Dependency injection
 
-    public private(set) var style: Style?
+    private(set) var style: Style?
 }

@@ -12,7 +12,6 @@
 		193CCB3F221F49550009ADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193CCB3D221F49550009ADFC /* Main.storyboard */; };
 		193CCB41221F49560009ADFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193CCB40221F49560009ADFC /* Assets.xcassets */; };
 		193CCB44221F49560009ADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193CCB42221F49560009ADFC /* LaunchScreen.storyboard */; };
-		193CCB4F221F49560009ADFC /* jrkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB4E221F49560009ADFC /* jrkTests.swift */; };
 		193CCB5F221F49F30009ADFC /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB5E221F49F30009ADFC /* Layout.swift */; };
 		193CCB61221F4A4A0009ADFC /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB60221F4A4A0009ADFC /* UICollectionView.swift */; };
 		193CCB64221F4A890009ADFC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB63221F4A890009ADFC /* Identifiable.swift */; };
@@ -44,16 +43,6 @@
 		19E73E4122495E140014664A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E73E4022495E140014664A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		193CCB4B221F49560009ADFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193CCB2E221F49550009ADFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 193CCB35221F49550009ADFC;
-			remoteInfo = jrk;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		193CCB36221F49550009ADFC /* jrk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jrk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193CCB39221F49550009ADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +51,6 @@
 		193CCB40221F49560009ADFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		193CCB43221F49560009ADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		193CCB45221F49560009ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		193CCB4A221F49560009ADFC /* jrkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jrkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		193CCB4E221F49560009ADFC /* jrkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jrkTests.swift; sourceTree = "<group>"; };
-		193CCB50221F49560009ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		193CCB5E221F49F30009ADFC /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		193CCB60221F4A4A0009ADFC /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		193CCB63221F4A890009ADFC /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -105,13 +91,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		193CCB47221F49560009ADFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				193CCB38221F49550009ADFC /* jrk */,
-				193CCB4D221F49560009ADFC /* Tests */,
 				193CCB37221F49550009ADFC /* Products */,
 				19E73E3F22495E130014664A /* Frameworks */,
 			);
@@ -129,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				193CCB36221F49550009ADFC /* jrk.app */,
-				193CCB4A221F49560009ADFC /* jrkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,15 +120,6 @@
 				193CCB45221F49560009ADFC /* Info.plist */,
 			);
 			path = jrk;
-			sourceTree = "<group>";
-		};
-		193CCB4D221F49560009ADFC /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				193CCB4E221F49560009ADFC /* jrkTests.swift */,
-				193CCB50221F49560009ADFC /* Info.plist */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		193CCB59221F49950009ADFC /* Source */ = {
@@ -388,24 +356,6 @@
 			productReference = 193CCB36221F49550009ADFC /* jrk.app */;
 			productType = "com.apple.product-type.application";
 		};
-		193CCB49221F49560009ADFC /* jrkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 193CCB56221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrkTests" */;
-			buildPhases = (
-				193CCB46221F49560009ADFC /* Sources */,
-				193CCB47221F49560009ADFC /* Frameworks */,
-				193CCB48221F49560009ADFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				193CCB4C221F49560009ADFC /* PBXTargetDependency */,
-			);
-			name = jrkTests;
-			productName = jrkTests;
-			productReference = 193CCB4A221F49560009ADFC /* jrkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -418,15 +368,12 @@
 				TargetAttributes = {
 					193CCB35221F49550009ADFC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
-					};
-					193CCB49221F49560009ADFC = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 193CCB35221F49550009ADFC;
 					};
 				};
 			};
@@ -444,7 +391,6 @@
 			projectRoot = "";
 			targets = (
 				193CCB35221F49550009ADFC /* jrk */,
-				193CCB49221F49560009ADFC /* jrkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -457,13 +403,6 @@
 				193CCB44221F49560009ADFC /* LaunchScreen.storyboard in Resources */,
 				193CCB41221F49560009ADFC /* Assets.xcassets in Resources */,
 				193CCB3F221F49550009ADFC /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		193CCB48221F49560009ADFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,23 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		193CCB46221F49560009ADFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				193CCB4F221F49560009ADFC /* jrkTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		193CCB4C221F49560009ADFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 193CCB35221F49550009ADFC /* jrk */;
-			targetProxy = 193CCB4B221F49560009ADFC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		193CCB3D221F49550009ADFC /* Main.storyboard */ = {
@@ -674,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.jrk2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -692,50 +615,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.jrk2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		193CCB57221F49560009ADFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WSQ25TFDK3;
-				INFOPLIST_FILE = jrkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.jrkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jrk.app/jrk";
-			};
-			name = Debug;
-		};
-		193CCB58221F49560009ADFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WSQ25TFDK3;
-				INFOPLIST_FILE = jrkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = no.jstien.jrkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jrk.app/jrk";
 			};
 			name = Release;
 		};
@@ -756,15 +637,6 @@
 			buildConfigurations = (
 				193CCB54221F49560009ADFC /* Debug */,
 				193CCB55221F49560009ADFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		193CCB56221F49560009ADFC /* Build configuration list for PBXNativeTarget "jrkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				193CCB57221F49560009ADFC /* Debug */,
-				193CCB58221F49560009ADFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
