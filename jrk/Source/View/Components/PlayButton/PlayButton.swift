@@ -75,15 +75,29 @@ class PlayButton: UIView {
         delegate?.playButtonClicked(self)
     }
 
+    let animOptions: UIView.AnimationOptions = [.allowUserInteraction, .beginFromCurrentState]
+    let animDuration: CGFloat = 1.6
+    let animScale: CGFloat = 0.8
+
     @objc private func buttonTouchBegan() {
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.overrideInheritedOptions, .curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
-            self?.button.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        UIView.animate(withDuration: Double(animDuration), delay: 0, options: animOptions, animations: { [weak self] in
+            guard let self = self else { return }
+            self.button.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         }, completion: nil)
     }
 
     @objc private func buttonTouchEnded() {
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.overrideInheritedOptions, .curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
-            self?.button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        let currentScale = button.layer.presentation()?.transform.m11 ?? animScale
+        let currentState = 1.0 - (currentScale - animScale) / (1.0 - animScale)
+        let duration = animDuration * currentState
+
+        // Force the button into its' current state, abort all animations
+        button.transform = CGAffineTransform(scaleX: currentScale, y: currentScale)
+        button.layer.removeAllAnimations()
+
+        UIView.animate(withDuration: Double(duration), delay: 0, options: animOptions, animations: { [weak self] in
+            guard let self = self else { return }
+            self.button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
 }

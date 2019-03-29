@@ -20,6 +20,7 @@ class StreamPlayer {
 
         audioSession = AVAudioSession()
         try? audioSession.setCategory(.playback, mode: .spokenAudio, options: [.allowAirPlay, .allowBluetooth, .allowBluetoothA2DP, .interruptSpokenAudioAndMixWithOthers])
+        try? audioSession.setActive(true, options: [])
     }
 
     // MARK: - Private methods
@@ -31,12 +32,10 @@ class StreamPlayer {
     }
 
     func play() {
-        try? audioSession.setActive(true, options: [])
         player.play()
     }
 
     func pause() {
-        try? audioSession.setActive(false, options: [])
         player.pause()
     }
 }
