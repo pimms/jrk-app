@@ -10,7 +10,9 @@ class PlayerViewController: UIViewController {
 
     private let serverConnection: ServerConnection
     private let streamPlayer: StreamPlayer
+    private let dispatchQueue = DispatchQueue(label: "player-vc-queue")
     private var networkClient: NetworkClient? // TODO: REMOVE
+
 
     // MARK: - UI properties
 
@@ -117,12 +119,13 @@ class PlayerViewController: UIViewController {
 
 extension PlayerViewController: PlayButtonDelegate {
     func playButtonClicked(_: PlayButton) {
-        print("Play button clicked")
-
-        if streamPlayer.isPlaying() {
-            streamPlayer.pause()
-        } else {
-            streamPlayer.play()
+        dispatchQueue.async { [weak self] in
+            guard let self = self else { return }
+            if self.streamPlayer.isPlaying() {
+                self.streamPlayer.pause()
+            } else {
+                self.streamPlayer.play()
+            }
         }
     }
 }

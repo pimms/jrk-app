@@ -58,6 +58,17 @@ class PlayButton: UIView {
 
         button.addTarget(self, action: #selector(buttonTouchBegan), for: [.touchDown])
         button.addTarget(self, action: #selector(buttonTouchEnded), for: [.touchDragExit, .touchUpInside, .touchUpOutside, .touchCancel])
+
+        addDropShadow()
+    }
+
+    private func addDropShadow() {
+        layer.shadowColor = UIColor.white.cgColor
+        layer.shadowOffset = .zero
+        layer.masksToBounds = false
+        layer.shadowRadius = 45.0
+        layer.shadowOpacity = 0.55
+        layer.cornerRadius = button.frame.width / 2
     }
 
     @objc private func buttonClicked() {
@@ -65,13 +76,13 @@ class PlayButton: UIView {
     }
 
     @objc private func buttonTouchBegan() {
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
+        UIView.animate(withDuration: 0.4, delay: 0, options: [.overrideInheritedOptions, .curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
             self?.button.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }, completion: nil)
     }
 
     @objc private func buttonTouchEnded() {
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
+        UIView.animate(withDuration: 0.4, delay: 0, options: [.overrideInheritedOptions, .curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
             self?.button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
