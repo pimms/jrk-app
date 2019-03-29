@@ -55,13 +55,26 @@ class PlayButton: UIView {
 
         button.fillInSuperview()
         button.constrainAspectRatio(1.0)
+
+        button.addTarget(self, action: #selector(buttonTouchBegan), for: [.touchDown])
+        button.addTarget(self, action: #selector(buttonTouchEnded), for: [.touchDragExit, .touchUpInside, .touchUpOutside, .touchCancel])
     }
 
     @objc private func buttonClicked() {
         delegate?.playButtonClicked(self)
     }
 
+    @objc private func buttonTouchBegan() {
+        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
+            self?.button.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }, completion: nil)
+    }
 
+    @objc private func buttonTouchEnded() {
+        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: { [weak self] in
+            self?.button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
 }
 
 // MARK: - UIView overrides
