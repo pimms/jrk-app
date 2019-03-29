@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19222B08224E8A560002E5A9 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19222B07224E8A560002E5A9 /* UIApplication.swift */; };
 		193CCB3A221F49550009ADFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB39221F49550009ADFC /* AppDelegate.swift */; };
 		193CCB3C221F49550009ADFC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CCB3B221F49550009ADFC /* RootViewController.swift */; };
 		193CCB3F221F49550009ADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193CCB3D221F49550009ADFC /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19222B07224E8A560002E5A9 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		193CCB36221F49550009ADFC /* jrk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jrk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193CCB39221F49550009ADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		193CCB3B221F49550009ADFC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				19C0775322207D9700AA17EB /* UIColor.swift */,
 				19C077552222E40C00AA17EB /* UIAlertController.swift */,
 				196717BF222C166A00D4A692 /* CGPoint.swift */,
+				19222B07224E8A560002E5A9 /* UIApplication.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				19706CBA2223394A000E68A2 /* NowPlayingClient.swift in Sources */,
 				193CCB3C221F49550009ADFC /* RootViewController.swift in Sources */,
 				193CCB73221F4DC00009ADFC /* Label+Style.swift in Sources */,
+				19222B08224E8A560002E5A9 /* UIApplication.swift in Sources */,
 				19C0774422205B5F00AA17EB /* NetworkClient.swift in Sources */,
 				193CCB67221F4AC00009ADFC /* Colors.swift in Sources */,
 				19C0775422207D9700AA17EB /* UIColor.swift in Sources */,

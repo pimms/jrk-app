@@ -61,12 +61,9 @@ class PlayerViewController: UIViewController {
         fatalError()
     }
 
-    init(server: ServerConnection) {
-        serverConnection = server
-
-        let url = URL(string: serverConnection.rootUrl)!.appendingPathComponent(serverConnection.playlistPath)
-        streamPlayer = StreamPlayer(streamUrl: url)
-
+    init(connection: ServerConnection, player: StreamPlayer) {
+        self.serverConnection = connection
+        self.streamPlayer = player
         super.init(nibName: nil, bundle: nil)
     }
 
