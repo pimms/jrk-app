@@ -83,7 +83,11 @@ class PlayButton: UIView {
         UIView.animate(withDuration: Double(animDuration), delay: 0, options: animOptions, animations: { [weak self] in
             guard let self = self else { return }
             self.button.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        }, completion: nil)
+        })
+
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: [.beginFromCurrentState], animations: {
+            self.button.backgroundColor = .lightGray
+        })
     }
 
     @objc private func buttonTouchEnded() {
@@ -98,7 +102,8 @@ class PlayButton: UIView {
         UIView.animate(withDuration: Double(duration), delay: 0, options: animOptions, animations: { [weak self] in
             guard let self = self else { return }
             self.button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        }, completion: nil)
+            self.button.backgroundColor = .white
+        })
     }
 }
 
